@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack
+    environment:
+      - SERVICES=lambda,s3,iam,apigateway
+      - DEFAULT_REGION=eu-west-1
+      - EDGE_PORT=4566
+      - LAMBDA_EXECUTOR=docker
+    ports:
+      - "4566:4566"

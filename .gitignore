@@ -1,0 +1,7 @@
+bin/
+obj/
+.terraform/
+*.zip
+output.txt
+.terraform.lock.hcl
+terraform.tfstate
